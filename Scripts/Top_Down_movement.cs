@@ -17,7 +17,6 @@ public class Top_Down_movement : MonoBehaviour
      Horizontal = Input.GetAxisRaw("Horizontal");
      Vertical = Input.GetAxisRaw("Vertical"); 
      StartCoroutine(Dash(6f));
-     Flip();
     }
     private void FixedUpdate()
     {
@@ -37,15 +36,5 @@ public class Top_Down_movement : MonoBehaviour
          speed = 5f;
       }
     }
-    public void Flip()
-    {
-        if (Horizontal < -.01f)
-        {
-            transform.localScale = new Vector2(-1, 1);
-        }
-        else if (Horizontal > .01f)
-        {
-            transform.localScale = new Vector2(1, 1);
-        }
-    }
+
 }
