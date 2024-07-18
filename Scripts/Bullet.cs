@@ -11,4 +11,8 @@ public class Bullet : MonoBehaviour
     {
          transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
+  private void OnTrigger2D(Collider2D other)
+  {
+      Destroy(gameObject);
+  }
 }
