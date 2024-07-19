@@ -2528,7 +2528,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0
+  m_Intensity: 1.06
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -3638,8 +3638,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.28
+  m_Color: {r: 1, g: 0.91819346, b: 0.25943398, a: 1}
+  m_Intensity: 0.93
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 1b036e76
@@ -3661,7 +3661,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.15
-  m_PointLightOuterRadius: 0.29
+  m_PointLightOuterRadius: 6.27
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -8674,6 +8674,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 35563084}
     m_Modifications:
+    - target: {fileID: 2269378668836734753, guid: 973151cf9ac5a574aa4aa2f9f58aa5ab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5398949446680831078, guid: 973151cf9ac5a574aa4aa2f9f58aa5ab, type: 3}
       propertyPath: toggle
       value: 
@@ -8726,6 +8730,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 6614761789043987244, guid: 973151cf9ac5a574aa4aa2f9f58aa5ab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614761789043987244, guid: 973151cf9ac5a574aa4aa2f9f58aa5ab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.03
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 973151cf9ac5a574aa4aa2f9f58aa5ab, type: 3}
 --- !u!1001 &5607142972736679383
@@ -8736,7 +8748,7 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5607142971410381815, guid: f77413e274040ab4894423cb9b21fbf1, type: 3}
-      propertyPath: Icon
+      propertyPath: Icon.Array.data[0]
       value: 
       objectReference: {fileID: 1847345038}
     - target: {fileID: 5607142972956554316, guid: f77413e274040ab4894423cb9b21fbf1, type: 3}

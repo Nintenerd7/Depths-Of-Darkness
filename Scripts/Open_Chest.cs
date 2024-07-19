@@ -8,7 +8,7 @@ public class Open_Chest : MonoBehaviour
     bool inrange;
 public SpriteRenderer spriteRenderer;
 public Sprite newSprite;
-public GameObject Icon;
+public GameObject[] Icon = new GameObject[2];
 int KeyCount = 1;//how many keys the player has taken
     public KeyCode Unlock;
 
@@ -21,7 +21,8 @@ int KeyCount = 1;//how many keys the player has taken
            spriteRenderer.sprite = newSprite; 
            hasKey = true;
            Debug.Log("Player has key");
-           Icon.SetActive(true);
+           Icon[0].SetActive(true);
+           Icon[1].SetActive(false);
            KeyCount--;
 
         }
@@ -36,6 +37,7 @@ int KeyCount = 1;//how many keys the player has taken
     {
        if(collision.tag == "Player")
        {
+         Icon[1].SetActive(true);
          inrange = true;
          Debug.Log("Player is in range");
        }
