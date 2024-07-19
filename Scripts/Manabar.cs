@@ -11,7 +11,7 @@ public class Manabar : MonoBehaviour
             bar = GetComponent<RectTransform>();
             SetSize(totalMana);
         }
-        public void Damage(float Magic)
+        public void Magic_Cost(float Magic)
         {
             if ((totalMana -= Magic) >= 0f)
             {
@@ -23,9 +23,20 @@ public class Manabar : MonoBehaviour
             }
             SetSize(totalMana);
         }
-
+        public void Magic_Gain(float Magic)
+        {
+            if ((totalMana += Magic) <= 0f)
+            {
+                totalMana += Magic;
+            }
+            else if (totalMana >= 1)
+            {
+             totalMana = 1;
+            }
+            SetSize(totalMana);
+        }
         public static void SetSize(float size)
         {
-            bar.localScale = new Vector3(size, 0.7265625f);
+            bar.localScale = new Vector3(size, 0.22f);
         }
 }
