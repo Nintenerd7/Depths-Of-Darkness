@@ -664,6 +664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 208435399}
   - component: {fileID: 208435400}
+  - component: {fileID: 208435401}
   m_Layer: 0
   m_Name: Key_Trigger
   m_TagString: Untagged
@@ -702,6 +703,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &208435401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208435398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91f586d0e6003fd46b6f8f9d7b1e83e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasKey: 1
+  UnlockDoor: {fileID: 1548425492}
+  Unlock: 101
 --- !u!1 &218687058
 GameObject:
   m_ObjectHideFlags: 0
