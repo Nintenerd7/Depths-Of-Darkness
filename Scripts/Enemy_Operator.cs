@@ -10,7 +10,7 @@ public class Enemy_Operator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Enemy_Behaviour = Enemy.patrol;
+        Enemy_Behaviour = Enemy.idle;
     }
 
     // Update is called once per frame
@@ -18,16 +18,15 @@ public class Enemy_Operator : MonoBehaviour
     {
         switch(Enemy_Behaviour)
         {
-          case Enemy.patrol:
-          move.Enemy_Patrol();
-          //Access enemy patrol script
+          case Enemy.idle:
+          move.Idle();
           break;
           case Enemy.Chase:
           move.Chase();
           //Access enemy Chase script
           break;
           case Enemy.Attack:
-          //Access enemy attack script
+          StartCoroutine(move.Attack(1.5f));
           break;    
 
           case Enemy.Return:
@@ -37,7 +36,7 @@ public class Enemy_Operator : MonoBehaviour
     }
 
     public enum Enemy{
-        patrol,
+        idle,
         Chase,
         Attack,
         Return,

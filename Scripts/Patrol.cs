@@ -18,7 +18,7 @@ public class Patrol : MonoBehaviour
     }
 
     //update
-    public void Enemy_Patrol()
+    public void Idle()
     {
       speed = 0;//enemy stands still
     }
@@ -35,12 +35,16 @@ public class Patrol : MonoBehaviour
       speed = 1f;//enemy slows speed to return back to zero
       transform.position = Vector2.MoveTowards(transform.position, returnPos.position,speed*Time.deltaTime);//enemy position will move towards player using the speed it has.
       yield return new WaitForSeconds(1);
-      states.Enemy_Behaviour = Enemy_Operator.Enemy.patrol;
+      states.Enemy_Behaviour = Enemy_Operator.Enemy.idle;
     }
 
     public IEnumerator Attack(float charge_Speed)
     {
-      //attack logic
-      yield break;
+      transform.position = Vector2.MoveTowards(transform.position, Target.position,speed*Time.deltaTime);
+      speed += charge_Speed;//adds dash to enemy
+      attack.TakeHeart();
+      yield return new WaitForSeconds(0.04f);
+      states.Enemy_Behaviour = Enemy_Operator.Enemy.Return;
+   
     }
 }

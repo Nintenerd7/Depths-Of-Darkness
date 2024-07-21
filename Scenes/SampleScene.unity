@@ -852,6 +852,7 @@ GameObject:
   m_Component:
   - component: {fileID: 237056700}
   - component: {fileID: 237056701}
+  - component: {fileID: 237056702}
   m_Layer: 0
   m_Name: Follow radius
   m_TagString: Untagged
@@ -890,6 +891,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.3
+--- !u!114 &237056702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237056699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1e0044085088c541af3e3d9cc915b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyFollow: {fileID: 1497275276}
 --- !u!1001 &267133892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3073,7 +3087,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.98
+  m_Radius: 0.29
 --- !u!1001 &924697365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3669,7 +3683,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013382316, y: -0.36444056}
+  m_Offset: {x: 0.0021439344, y: -0.2622898}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3680,7 +3694,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.57559013, y: 0.27111888}
+  m_Size: {x: 0.74416494, y: 0.56542045}
   m_EdgeRadius: 0
 --- !u!4 &1136914128 stripped
 Transform:
@@ -3779,6 +3793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1329535122}
   - component: {fileID: 1329535123}
+  - component: {fileID: 1329535124}
   m_Layer: 0
   m_Name: Attack_Radius
   m_TagString: E_Hurtbox
@@ -3817,6 +3832,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.85
+--- !u!114 &1329535124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329535121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743c3f001fcb97a46b1b5f5005a0cd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAttack: {fileID: 1497275276}
 --- !u!1 &1334982145
 GameObject:
   m_ObjectHideFlags: 0
