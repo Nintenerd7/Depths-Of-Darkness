@@ -42,8 +42,8 @@ public class Patrol : MonoBehaviour
     {
       transform.position = Vector2.MoveTowards(transform.position, Target.position,speed*Time.deltaTime);
       speed += charge_Speed;//adds dash to enemy
-      attack.TakeHeart();
-      yield return new WaitForSeconds(0.04f);
+      attack.TakeHeart(1);//takes heart from the player
+      yield return new WaitForSeconds(0.01f);
       states.Enemy_Behaviour = Enemy_Operator.Enemy.Return;
    
     }

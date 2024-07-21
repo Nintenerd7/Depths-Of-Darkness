@@ -8,7 +8,7 @@ public class Hurt_Detect : MonoBehaviour
 
    private void OnTriggerEnter2D(Collider2D other)
    {
-     if(other.tag == "P_Hurtbox")
+     if(other.tag == "Enemy")
      {
        enemyAttack.Enemy_Behaviour = Enemy_Operator.Enemy.Attack;
      }

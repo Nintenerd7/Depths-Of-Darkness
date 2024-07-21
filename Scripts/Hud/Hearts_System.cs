@@ -49,15 +49,14 @@ public class Hearts_System : MonoBehaviour
     }
 
     #region TakeHeart And GiveHeart Methods 
-    public void TakeHeart()
+    public void TakeHeart(int Heart_Damage)
     {
-        HeartHealth--;
+        HeartHealth-=Heart_Damage;
         hearts[i].sprite = Empty;
        // AudioSourceController.Instance.PlaySFX("Player_Hit");
-
         if (HeartHealth == 0)
         {
-            SceneManager.LoadScene(2);
+            //SceneManager.LoadScene(2);
             HeartHealth = 3; 
         }
     }
