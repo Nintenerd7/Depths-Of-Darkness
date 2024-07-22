@@ -45,7 +45,6 @@ public class Patrol : MonoBehaviour
 
     public IEnumerator Attack(float charge_Speed)
     {
-      yield return new WaitForSeconds(0.04f);
       transform.position = Vector2.MoveTowards(transform.position, Target.position,speed*Time.deltaTime);//enemy will charge towards player times 2 of the speed.
       speed *= charge_Speed;//adds dash to enemy
       tr.emitting = true;
