@@ -9,9 +9,14 @@ public class Player_Detection : MonoBehaviour
    {
      if(other.tag == "Player")
      {
-      condition.CanMove = true;
+       condition.CanMove = true;
        condition.Follow_Condition();
      }
    }
+   private void OnTriggerExit2D(Collider2D other)
+   {
 
+       condition.CanMove = true;
+       Debug.Log("enemy still follows player");
+   }
 }
