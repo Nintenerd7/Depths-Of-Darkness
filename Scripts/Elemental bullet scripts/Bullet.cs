@@ -11,8 +11,20 @@ public class Bullet : MonoBehaviour
     {
          transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
-  private void OnTrigger2D(Collider2D other)
+  private void OnTriggerEnter2D(Collider2D other)
   {
-      Destroy(this.gameObject);
+        if(other.tag == "Destroyable")
+        {
+            Destroy(gameObject);
+        }
+        if(other.tag == "Enemy")
+        {
+            //var enemy = other.GetComponent<Enemy_Damage>();//gets class enemy damage
+           // if (enemy)
+           // {
+              //  enemy.TakeHit(1f);//enemy takes a hit from the bullet
+           // }
+            Destroy(gameObject);//destroys object after collision
+        }
   }
 }

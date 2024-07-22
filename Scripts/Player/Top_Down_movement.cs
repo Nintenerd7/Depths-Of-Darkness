@@ -10,6 +10,7 @@ public class Top_Down_movement : MonoBehaviour
     float Horizontal;
     float Vertical;
     public bool isDashing = false; 
+    public TrailRenderer tr;
     // Start is called before the first frame update
     // Update is called once per frame
     void Update()
@@ -31,7 +32,9 @@ public class Top_Down_movement : MonoBehaviour
       {
          isDashing = true;
          speed += dashing;
+         tr.emitting = true;
          yield return new WaitForSeconds(0.4f);
+         tr.emitting = false;
          isDashing = false;
          speed = 5f;
       }
