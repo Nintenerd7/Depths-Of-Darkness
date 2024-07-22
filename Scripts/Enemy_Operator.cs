@@ -33,6 +33,12 @@ public class Enemy_Operator : MonoBehaviour
           StartCoroutine(move.Return_To_Position());
           break;     
         }
+        LayerMask mask = LayerMask.GetMask("Collision");
+            if (Physics.Raycast(transform.position, transform.forward, 20.0f, mask))
+            {
+                Debug.Log("Enemy Hit a colision");
+            }
+
     }
 
     public enum Enemy{

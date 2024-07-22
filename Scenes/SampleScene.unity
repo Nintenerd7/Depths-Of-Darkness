@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 89394103}
   - component: {fileID: 89394102}
   - component: {fileID: 89394101}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Unlit tourch  (1)
   m_TagString: Destroyable
   m_Icon: {fileID: 0}
@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 183931188}
   - component: {fileID: 183931190}
   - component: {fileID: 183931189}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fire stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 232058835}
   - component: {fileID: 232058837}
   - component: {fileID: 232058836}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1072,7 +1072,7 @@ GameObject:
   - component: {fileID: 294344381}
   - component: {fileID: 294344383}
   - component: {fileID: 294344382}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fire stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1258,7 +1258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 332358089}
   - component: {fileID: 332358090}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1376,7 +1376,7 @@ GameObject:
   - component: {fileID: 354708085}
   - component: {fileID: 354708084}
   - component: {fileID: 354708083}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Unlit tourch  (2)
   m_TagString: Destroyable
   m_Icon: {fileID: 0}
@@ -1883,7 +1883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543954191}
   - component: {fileID: 543954192}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2087,7 +2087,7 @@ GameObject:
   - component: {fileID: 588886959}
   - component: {fileID: 588886961}
   - component: {fileID: 588886960}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2195,7 +2195,7 @@ GameObject:
   - component: {fileID: 605425562}
   - component: {fileID: 605425564}
   - component: {fileID: 605425563}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2373,7 +2373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 606782357}
   - component: {fileID: 606782358}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2456,7 +2456,7 @@ GameObject:
   - component: {fileID: 612126252}
   - component: {fileID: 612126254}
   - component: {fileID: 612126253}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fire stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2824,7 +2824,7 @@ GameObject:
   - component: {fileID: 863257770}
   - component: {fileID: 863257769}
   - component: {fileID: 863257768}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Unlit tourch  (3)
   m_TagString: Destroyable
   m_Icon: {fileID: 0}
@@ -2940,7 +2940,7 @@ GameObject:
   - component: {fileID: 865441875}
   - component: {fileID: 865441877}
   - component: {fileID: 865441876}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fire stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3835,7 +3835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1287508733}
   - component: {fileID: 1287508734}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4246,7 +4246,7 @@ GameObject:
   - component: {fileID: 1495609759}
   - component: {fileID: 1495609761}
   - component: {fileID: 1495609760}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4498,7 +4498,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -4935,7 +4935,7 @@ GameObject:
   - component: {fileID: 1551258440}
   - component: {fileID: 1551258442}
   - component: {fileID: 1551258441}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lit tourch (2)
   m_TagString: Destroyable
   m_Icon: {fileID: 0}
@@ -5138,7 +5138,7 @@ GameObject:
   - component: {fileID: 1630800997}
   - component: {fileID: 1630800999}
   - component: {fileID: 1630800998}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5281,7 +5281,7 @@ GameObject:
   - component: {fileID: 1704534284}
   - component: {fileID: 1704534286}
   - component: {fileID: 1704534285}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Lit tourch (1)
   m_TagString: Destroyable
   m_Icon: {fileID: 0}
@@ -7577,7 +7577,7 @@ GameObject:
   - component: {fileID: 1950882496}
   - component: {fileID: 1950882498}
   - component: {fileID: 1950882497}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fire stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7691,7 +7691,7 @@ GameObject:
   - component: {fileID: 1974540944}
   - component: {fileID: 1974540943}
   - component: {fileID: 1974540942}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Destroyable
   m_Icon: {fileID: 0}
@@ -9154,7 +9154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2106431549}
   - component: {fileID: 2106431550}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9282,8 +9282,24 @@ PrefabInstance:
       value: Lit tourch
       objectReference: {fileID: 0}
     - target: {fileID: 2957228504719637353, guid: e93a0459c39ffd2409edde7b30359f3b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957228504719637353, guid: e93a0459c39ffd2409edde7b30359f3b, type: 3}
       propertyPath: m_TagString
       value: Destroyable
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957228504757131498, guid: e93a0459c39ffd2409edde7b30359f3b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957228505010291529, guid: e93a0459c39ffd2409edde7b30359f3b, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957228505490253180, guid: e93a0459c39ffd2409edde7b30359f3b, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e93a0459c39ffd2409edde7b30359f3b, type: 3}
@@ -9294,10 +9310,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 35563084}
     m_Modifications:
+    - target: {fileID: 2269378668836734753, guid: 973151cf9ac5a574aa4aa2f9f58aa5ab, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5398949446680831078, guid: 973151cf9ac5a574aa4aa2f9f58aa5ab, type: 3}
       propertyPath: toggle
       value: 
       objectReference: {fileID: 1903318560}
+    - target: {fileID: 5398949446680831081, guid: 973151cf9ac5a574aa4aa2f9f58aa5ab, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5398949447484081594, guid: 973151cf9ac5a574aa4aa2f9f58aa5ab, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9346,6 +9370,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 5398949447484081595, guid: 973151cf9ac5a574aa4aa2f9f58aa5ab, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984544431438278685, guid: 973151cf9ac5a574aa4aa2f9f58aa5ab, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 973151cf9ac5a574aa4aa2f9f58aa5ab, type: 3}
 --- !u!1001 &5607142972736679383
@@ -9355,6 +9387,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 497220211966829769, guid: f77413e274040ab4894423cb9b21fbf1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377154989779879508, guid: f77413e274040ab4894423cb9b21fbf1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5607142971410381769, guid: f77413e274040ab4894423cb9b21fbf1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5607142971410381815, guid: f77413e274040ab4894423cb9b21fbf1, type: 3}
       propertyPath: Icon.Array.data[0]
       value: 
@@ -9407,6 +9451,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest
       objectReference: {fileID: 0}
+    - target: {fileID: 5607142972956554319, guid: f77413e274040ab4894423cb9b21fbf1, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f77413e274040ab4894423cb9b21fbf1, type: 3}
 --- !u!1001 &7758349703642210986
@@ -9419,6 +9467,10 @@ PrefabInstance:
     - target: {fileID: 7758349703623753825, guid: 50b0deaef0e095949b9eb30088df1ec2, type: 3}
       propertyPath: m_Name
       value: 'Unlit tourch '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7758349703623753825, guid: 50b0deaef0e095949b9eb30088df1ec2, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7758349703623753825, guid: 50b0deaef0e095949b9eb30088df1ec2, type: 3}
       propertyPath: m_TagString
@@ -9467,6 +9519,18 @@ PrefabInstance:
     - target: {fileID: 7758349703623753830, guid: 50b0deaef0e095949b9eb30088df1ec2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7758349704069337683, guid: 50b0deaef0e095949b9eb30088df1ec2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7758349704411345600, guid: 50b0deaef0e095949b9eb30088df1ec2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7758349704541414771, guid: 50b0deaef0e095949b9eb30088df1ec2, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50b0deaef0e095949b9eb30088df1ec2, type: 3}

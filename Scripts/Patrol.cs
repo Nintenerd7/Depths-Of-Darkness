@@ -45,13 +45,13 @@ public class Patrol : MonoBehaviour
 
     public IEnumerator Attack(float charge_Speed)
     {
-      transform.position = Vector2.MoveTowards(transform.position, Target.position,speed*Time.deltaTime);//enemy will charge towards player times 2 of the speed. 
+      yield return new WaitForSeconds(0.04f);
+      transform.position = Vector2.MoveTowards(transform.position, Target.position,speed*Time.deltaTime);//enemy will charge towards player times 2 of the speed.
       speed *= charge_Speed;//adds dash to enemy
       tr.emitting = true;
-      yield return new WaitForSeconds(0.04f);
+      yield return new WaitForSeconds(0.1f);
       tr.emitting = false;
-      speed = 0;
-      CanMove = false;
+      Stop_Moving();
       yield return new WaitForSeconds(1f);
       CanMove = true;
       Follow_Condition();
@@ -63,5 +63,11 @@ public class Patrol : MonoBehaviour
       {
        states.Enemy_Behaviour = Enemy_Operator.Enemy.Chase;
       }
+    }
+
+    public void Stop_Moving()
+    {
+      speed = 0;
+      CanMove = false;
     }
 }
