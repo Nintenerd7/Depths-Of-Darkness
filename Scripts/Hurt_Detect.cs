@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Hurt_Detect : MonoBehaviour
 {
-   public Enemy_Operator enemyAttack;
+   public Hearts_System health;
 
    private void OnTriggerEnter2D(Collider2D other)
    {
      if(other.tag == "Enemy")
      {
-       enemyAttack.Enemy_Behaviour = Enemy_Operator.Enemy.Attack;
+       health.TakeHeart(1);//takes one heart
      }
    }
 }

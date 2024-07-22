@@ -13,6 +13,6 @@ public class Bullet : MonoBehaviour
     }
   private void OnTrigger2D(Collider2D other)
   {
-      Destroy(gameObject);
+      Destroy(this.gameObject);
   }
 }

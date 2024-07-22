@@ -2590,7 +2590,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.47
+  m_Intensity: 0
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -3101,7 +3101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743c3f001fcb97a46b1b5f5005a0cd73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAttack: {fileID: 1497275276}
+  health: {fileID: 271847728}
 --- !u!1001 &924697365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3663,6 +3663,7 @@ MonoBehaviour:
   body: {fileID: 1111277433}
   speed: 5
   isDashing: 0
+  Effect: {fileID: 0}
 --- !u!50 &1111277433
 Rigidbody2D:
   serializedVersion: 4
@@ -4349,7 +4350,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  attack: {fileID: 271847728}
   states: {fileID: 1497275276}
   Target: {fileID: 1111277431}
   returnPos: {fileID: 1861844537}
