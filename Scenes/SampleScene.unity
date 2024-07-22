@@ -853,7 +853,7 @@ GameObject:
   - component: {fileID: 237056700}
   - component: {fileID: 237056701}
   - component: {fileID: 237056702}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Follow radius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -904,6 +904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   condition: {fileID: 1497275279}
+  states: {fileID: 1497275276}
 --- !u!1001 &267133892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3053,7 +3054,7 @@ GameObject:
   - component: {fileID: 922903858}
   m_Layer: 0
   m_Name: Hurtbox
-  m_TagString: P_Hurtbox
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3379,7 +3380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1067384210}
   - component: {fileID: 1067384211}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4357,7 +4358,7 @@ GameObject:
   - component: {fileID: 1497275280}
   - component: {fileID: 1497275281}
   - component: {fileID: 1497275282}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}

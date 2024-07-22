@@ -22,7 +22,7 @@ public class Enemy_Operator : MonoBehaviour
           move.Idle();
           break;
           case Enemy.Chase:
-          StartCoroutine(move.Chase());
+          move.Chase();
           //Access enemy Chase script
           break;
           case Enemy.Attack:
