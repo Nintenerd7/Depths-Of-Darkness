@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Player_Detection : MonoBehaviour
 {
-    public Enemy_Operator enemyFollow;
+    public Patrol condition;
    private void OnTriggerEnter2D(Collider2D other)
    {
      if(other.tag == "Player")
      {
-       enemyFollow.Enemy_Behaviour = Enemy_Operator.Enemy.Chase;
+      condition.CanMove = true;
+       condition.Follow_Condition();
      }
    }
 

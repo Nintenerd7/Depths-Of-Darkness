@@ -14,7 +14,7 @@ public class Enemy_Operator : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         switch(Enemy_Behaviour)
         {

@@ -9,11 +9,14 @@ public class Patrol : MonoBehaviour
     public Enemy_Operator states;
     public Transform Target;
     public Transform returnPos;
+    public TrailRenderer tr;
+    public bool CanMove;
     //
 
     void Start()
     {
       Target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+      CanMove = false;
     }
 
     //update
@@ -26,8 +29,9 @@ public class Patrol : MonoBehaviour
     {
       speed = 1.5f;//enemy kicks up speed 
       transform.position = Vector2.MoveTowards(transform.position, Target.position,speed*Time.deltaTime);//enemy position will move towards player using the speed it has.
-      yield return new WaitForSeconds(3);
+      yield return new WaitForSeconds(5);
       states.Enemy_Behaviour = Enemy_Operator.Enemy.Attack;//enemy will charge toward the player.
+
     }
 
     public IEnumerator Return_To_Position()
@@ -43,8 +47,21 @@ public class Patrol : MonoBehaviour
     {
       transform.position = Vector2.MoveTowards(transform.position, Target.position,speed*Time.deltaTime);//enemy will charge towards player times 2 of the speed. 
       speed *= charge_Speed;//adds dash to enemy
-      yield return new WaitForSeconds(0.01f);//0.01 second delay
-      states.Enemy_Behaviour = Enemy_Operator.Enemy.Chase;//Player keeps getting chased
-   
+      tr.emitting = true;
+      yield return new WaitForSeconds(0.04f);
+      tr.emitting = false;
+      speed = 0;
+      CanMove = false;
+      yield return new WaitForSeconds(1f);
+      CanMove = true;
+      Follow_Condition();
+    }
+
+    public void Follow_Condition()
+    {
+      if(CanMove)
+      {
+       states.Enemy_Behaviour = Enemy_Operator.Enemy.Chase;
+      }
     }
 }
