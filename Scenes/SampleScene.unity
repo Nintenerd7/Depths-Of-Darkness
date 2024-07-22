@@ -851,7 +851,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 237056700}
-  - component: {fileID: 237056701}
   - component: {fileID: 237056702}
   m_Layer: 2
   m_Name: Follow radius
@@ -875,22 +874,6 @@ Transform:
   m_Father: {fileID: 1497275278}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &237056701
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 237056699}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.3
 --- !u!114 &237056702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2831,7 +2814,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &863257767
 Transform:
   m_ObjectHideFlags: 0
@@ -4465,7 +4448,6 @@ MonoBehaviour:
   Target: {fileID: 1111277431}
   returnPos: {fileID: 1861844537}
   tr: {fileID: 1497275282}
-  CanMove: 0
 --- !u!58 &1497275280
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4490,7 +4472,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497275275}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

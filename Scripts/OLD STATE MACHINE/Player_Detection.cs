@@ -37,15 +37,12 @@ public class Player_Detection : MonoBehaviour
    }
 
    public IEnumerator ChangeStates()
-   {
-    while(Is_In_Sight)
-    {
-      states.Enemy_Behaviour = Enemy_Operator.Enemy.Chase;
-      Debug.Log("is chasing");
+   { 
+      condition.Moving(true);
       yield return new WaitForSeconds(3);
-      states.Enemy_Behaviour = Enemy_Operator.Enemy.Attack;
-      Debug.Log("is Attacking");
-      break;
-    }
+      condition.Attack(true);
+      yield return new WaitForSeconds(0.1f);
+      condition.Attack(false);
    }
+
 }
