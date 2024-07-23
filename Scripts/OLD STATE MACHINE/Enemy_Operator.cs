@@ -22,9 +22,13 @@ public class Enemy_Operator : MonoBehaviour
           move.Idle();
           break;
           case Enemy.Chase:
-          StartCoroutine(move.StateMachine());
+          move.AIFollow();
+          break;
+          case Enemy.Attack:
+          move.AIAttack();
           break;
         }
+        //enemy detects collisions
         LayerMask mask = LayerMask.GetMask("Collision");
             if (Physics.Raycast(transform.position, transform.forward, 20.0f, mask))
             {
@@ -37,5 +41,6 @@ public class Enemy_Operator : MonoBehaviour
     {
         idle,//when  the enemy is idle
         Chase,//enemy starts following the players position
+        Attack,
     }
 }

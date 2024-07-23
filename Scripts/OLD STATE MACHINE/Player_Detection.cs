@@ -7,7 +7,12 @@ public class Player_Detection : MonoBehaviour
     public Patrol condition;
    public bool Is_In_Sight = false;
     public Enemy_Operator states;
-    public bool Can_Attack;
+    public bool IsAttacking;
+
+    private void Start()
+    {
+      IsAttacking = false;//starts off as false
+    }
    private void Update()
    {
      CanBeSeen();
@@ -30,16 +35,15 @@ public class Player_Detection : MonoBehaviour
      }
    }
 
- public void Change()
- {
-     states.Enemy_Behaviour = Enemy_Operator.Enemy.Chase;
- }
-
 public void CanBeSeen()
 {
-      if(Is_In_Sight)
+      if(Is_In_Sight)//if is in sight
      {
-      Change();
+      if(!IsAttacking)  //checks if player is also not attacking
+      {
+        IsAttacking = true;
+        StartCoroutine(condition.StateMachine());//begins chase sequence
+      }
      }
      else
      {
