@@ -13,13 +13,14 @@ public class Idle : State
              if(ai.Is_In_Sight)
      {
        ai.SetState(new Chase(ai));
+      
      }
      else
      {
         ai.Idle();
-     }
-     yield break;
+        yield break;
         }
 
+}
 }
 }

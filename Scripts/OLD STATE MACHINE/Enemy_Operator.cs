@@ -22,9 +22,12 @@ public class Enemy_Operator : MonoBehaviour
           move.Idle();
           break;
           case Enemy.Chase:
-          move.Chase();
-          //Access enemy Chase script
+          StartCoroutine(move.Chase());
           break;
+          case Enemy.Attack:
+          move.Attack(true);
+          break;
+
           case Enemy.Return:
           StartCoroutine(move.Return_To_Position());
           break;     
@@ -40,6 +43,7 @@ public class Enemy_Operator : MonoBehaviour
     public enum Enemy{
         idle,//when  the enemy is idle
         Chase,//enemy starts following the players position
+        Attack,
         Return,//return to position and will change to idle state. 
     }
 }

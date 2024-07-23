@@ -11,12 +11,17 @@ public class AttackTurn : State
         }
         public override IEnumerator attack()
         {
+
             ai.Attack_Player();//player Dashes
             ai.tr.emitting = true;
             yield return new WaitForSeconds(0.1f);
-            ai.speed = 0;
-            yield break;
+            ai.Cooldown();
+            yield return new WaitForSeconds(1f);
+            ai.speed = 0f;
+
         }
+
+
 
 
 }

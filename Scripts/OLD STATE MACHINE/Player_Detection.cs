@@ -9,14 +9,7 @@ public class Player_Detection : MonoBehaviour
     public Enemy_Operator states;
    private void Update()
    {
-     if(Is_In_Sight)
-     {
-       
-     }
-     else
-     {
-       states.Enemy_Behaviour = Enemy_Operator.Enemy.idle;
-     }
+     CanBeSeen();
    }
    private void FixedUpdate()
    {
@@ -36,6 +29,21 @@ public class Player_Detection : MonoBehaviour
      }
    }
 
+ public void Change()
+ {
+     states.Enemy_Behaviour = Enemy_Operator.Enemy.Chase;
+ }
 
+public void CanBeSeen()
+{
+      if(Is_In_Sight)
+     {
+      Change();
+     }
+     else
+     {
+       states.Enemy_Behaviour = Enemy_Operator.Enemy.idle;
+     }
+}
 
 }

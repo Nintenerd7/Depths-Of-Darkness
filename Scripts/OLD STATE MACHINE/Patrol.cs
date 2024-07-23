@@ -23,30 +23,31 @@ public class Patrol : MonoBehaviour
       Moving(false);
     }
 
-    public void Chase()
+    public IEnumerator Chase()
     {
       Moving(true);
       tr.emitting = false;
       transform.position = Vector2.MoveTowards(transform.position, Target.position,speed*Time.deltaTime);//enemy position will move towards player using the speed it has.
+       yield return new WaitForSeconds(3f);
+     states.Enemy_Behaviour = Enemy_Operator.Enemy.Attack;
     }
 
     public IEnumerator Return_To_Position()
     {
 
-      speed = 1f;//enemy slows speed to return back to zero
+      speed = 0f;//enemy slows speed to return back to zero
       transform.position = Vector2.MoveTowards(transform.position, returnPos.position,speed*Time.deltaTime);//enemy position will move towards player using the speed it has.
       yield return new WaitForSeconds(1);
-      states.Enemy_Behaviour = Enemy_Operator.Enemy.idle;
+
     }
 
     public IEnumerator Attack(float charge_Speed)
     {
-      
       Attack(false);
       transform.position = Vector2.MoveTowards(transform.position, Target.position,speed*Time.deltaTime);//enemy will charge towards player times 2 of the speed.
-      speed *= charge_Speed;//adds dash to enemy
+      speed += charge_Speed;//adds dash to enemy
       tr.emitting = true;
-      yield return new WaitForSeconds(0.3f);
+      yield return new WaitForSeconds(0.03f);
       tr.emitting = false;
        
     }
@@ -69,7 +70,7 @@ public void Attack(bool Can_Attack)
 {
     if(Can_Attack)
   {
-    StartCoroutine(Attack(2f));
+    StartCoroutine(Attack(5f));
   }
   else
   {
