@@ -5,12 +5,13 @@ using UnityEngine;
 public class Patrol : MonoBehaviour
 {
     //variables
+    public float[] CoolDown = new float [3];
     public float speed;
     public Enemy_Operator states;
     public Transform Target;
     public Transform returnPos;
     public TrailRenderer tr;
-
+    public Player_Detection PD;
     void Start()
     {
       Target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -25,32 +26,28 @@ public class Patrol : MonoBehaviour
 
     public IEnumerator Chase()
     {
+      PD.Can_Attack = true;
       Moving(true);
+      speed = 1f;
       tr.emitting = false;
       transform.position = Vector2.MoveTowards(transform.position, Target.position,speed*Time.deltaTime);//enemy position will move towards player using the speed it has.
-       yield return new WaitForSeconds(3f);
-     states.Enemy_Behaviour = Enemy_Operator.Enemy.Attack;
+      yield return new WaitForSeconds(3f);
+      speed += 3f;
+      yield return new WaitForSeconds(0.4f);
+      speed = 0f;
+      yield return new WaitForSeconds(1f);
+      speed = 1f;
+      
     }
+ public IEnumerator StateMachine()
+ {
+   while(true)
+   {
+     Debug.Log("Is chashing");
+     StartCoroutine(Chase());
+   }
+ }
 
-    public IEnumerator Return_To_Position()
-    {
-
-      speed = 0f;//enemy slows speed to return back to zero
-      transform.position = Vector2.MoveTowards(transform.position, returnPos.position,speed*Time.deltaTime);//enemy position will move towards player using the speed it has.
-      yield return new WaitForSeconds(1);
-
-    }
-
-    public IEnumerator Attack(float charge_Speed)
-    {
-      Attack(false);
-      transform.position = Vector2.MoveTowards(transform.position, Target.position,speed*Time.deltaTime);//enemy will charge towards player times 2 of the speed.
-      speed += charge_Speed;//adds dash to enemy
-      tr.emitting = true;
-      yield return new WaitForSeconds(0.03f);
-      tr.emitting = false;
-       
-    }
 public void Moving(bool CanMove)
 {
   if(CanMove)
@@ -65,18 +62,4 @@ public void Moving(bool CanMove)
    speed = 0f;
   }
 }
-
-public void Attack(bool Can_Attack)
-{
-    if(Can_Attack)
-  {
-    StartCoroutine(Attack(5f));
-  }
-  else
-  {
-    Moving(true);
-  }
-}
-
-
 }

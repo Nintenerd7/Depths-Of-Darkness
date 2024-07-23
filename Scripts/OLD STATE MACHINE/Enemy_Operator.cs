@@ -22,15 +22,8 @@ public class Enemy_Operator : MonoBehaviour
           move.Idle();
           break;
           case Enemy.Chase:
-          StartCoroutine(move.Chase());
+          StartCoroutine(move.StateMachine());
           break;
-          case Enemy.Attack:
-          move.Attack(true);
-          break;
-
-          case Enemy.Return:
-          StartCoroutine(move.Return_To_Position());
-          break;     
         }
         LayerMask mask = LayerMask.GetMask("Collision");
             if (Physics.Raycast(transform.position, transform.forward, 20.0f, mask))
@@ -40,10 +33,9 @@ public class Enemy_Operator : MonoBehaviour
 
     }
 
-    public enum Enemy{
+    public enum Enemy
+    {
         idle,//when  the enemy is idle
         Chase,//enemy starts following the players position
-        Attack,
-        Return,//return to position and will change to idle state. 
     }
 }

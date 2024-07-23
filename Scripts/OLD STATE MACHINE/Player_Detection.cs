@@ -5,8 +5,9 @@ using UnityEngine;
 public class Player_Detection : MonoBehaviour
 {
     public Patrol condition;
-    bool Is_In_Sight = false;
+   public bool Is_In_Sight = false;
     public Enemy_Operator states;
+    public bool Can_Attack;
    private void Update()
    {
      CanBeSeen();
