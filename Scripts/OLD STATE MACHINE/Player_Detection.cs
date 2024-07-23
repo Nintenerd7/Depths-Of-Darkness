@@ -11,7 +11,7 @@ public class Player_Detection : MonoBehaviour
    {
      if(Is_In_Sight)
      {
-       StartCoroutine(ChangeStates());
+       
      }
      else
      {
@@ -36,13 +36,6 @@ public class Player_Detection : MonoBehaviour
      }
    }
 
-   public IEnumerator ChangeStates()
-   { 
-      condition.Moving(true);
-      yield return new WaitForSeconds(3);
-      condition.Attack(true);
-      yield return new WaitForSeconds(0.1f);
-      condition.Attack(false);
-   }
+
 
 }
