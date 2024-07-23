@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Patrol : MonoBehaviour
 {
-    public float speed;
-    public Enemy_Operator states;
-    public Transform Target;
-    public TrailRenderer tr;
-    public Player_Detection PD;
+    public float speed;//speed variable to calculate AI speed
+    public Enemy_Operator states;//gets the statemachine enums  
+    public Transform Target;//position used to target the player object 
+    public TrailRenderer tr;//Trail renderer is for the charge trail when AI speeds up for attacking 
+    public Player_Detection PD;//Gets the boolean that restarts the StateMachine Coroutine
 
     void Start()
     {
