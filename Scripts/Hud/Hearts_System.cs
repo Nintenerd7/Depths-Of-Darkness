@@ -61,9 +61,14 @@ public class Hearts_System : MonoBehaviour
         }
     }
     #endregion
-    public void GiveHeart()
+    public void GiveHeart(int Heart_Health)
     {
-        HeartHealth++;//player regains a heart 
+
+        HeartHealth+=Heart_Health; 
         hearts[i].sprite = Full;//sprite changes 
+        if (HeartHealth == 3)
+        {
+            HeartHealth = 3; 
+        }
     }
 }

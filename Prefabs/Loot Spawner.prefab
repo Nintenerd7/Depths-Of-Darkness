@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7794939909083879545}
+  - component: {fileID: 4938246637562219237}
   m_Layer: 0
   m_Name: Loot Spawner
   m_TagString: Untagged
@@ -31,3 +32,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4938246637562219237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882765729078215785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe089b12c05d67a4a92a955777038e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ore: {fileID: 8272762420077778048, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
+  heart: {fileID: 5461578658375531000, guid: 11e5c6f71e8ea9d48b7d04152c83ace3, type: 3}
