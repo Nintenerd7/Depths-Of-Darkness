@@ -8,7 +8,7 @@ public class Player_Detection : MonoBehaviour
    public bool Is_In_Sight = false;
     public Enemy_Operator states;
     public bool IsAttacking;
-    public LayerMask LayersToHit;
+    public LayerMask Layer;
 
     private void Start()
     {
@@ -46,7 +46,8 @@ public void CanBeSeen()//CAN BE SEEN METHOD IS USED TO DETERMINE WHAT STATE THE 
       if(!IsAttacking)  //checks if player is also not attacking
       {
         IsAttacking = true;//player is now attacking.
-        StartCoroutine(condition.StateMachine());//begins chase sequence
+        if(IsWalkable())StartCoroutine(condition.StateMachine());//begins chase sequence
+    
       }
      }
      else//if player is not in sight 
@@ -54,5 +55,16 @@ public void CanBeSeen()//CAN BE SEEN METHOD IS USED TO DETERMINE WHAT STATE THE 
        states.Enemy_Behaviour = Enemy_Operator.Enemy.idle;//player is idle 
      }
 }
+//checks for wall collisions
+            private bool IsWalkable()
+        {
+            //enables collisisions for interactive objects
+            if (Physics2D.OverlapCircle(transform.position, 0.3f, Layer) != null)
+            {
+                return false;
+            }
+            // 
+            return true;
+        }
 
 }
