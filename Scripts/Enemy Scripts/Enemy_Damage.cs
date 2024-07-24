@@ -9,6 +9,7 @@ public class Enemy_Damage : MonoBehaviour
     public float maxHitPoints = 3;
     public Rigidbody2D EnemyBody;
     public GameObject Explosion;
+    public GameObject Loot;
     //
 
     void start()
@@ -24,7 +25,7 @@ public class Enemy_Damage : MonoBehaviour
 
         if (HitPoints <= 0)
         {
-            
+            Instantiate(Loot,transform.position, Quaternion.identity);
             Instantiate(Explosion,transform.position, Quaternion.identity);
             Destroy(this.gameObject);//enemy is killed
         

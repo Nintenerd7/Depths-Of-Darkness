@@ -867,7 +867,7 @@ PrefabInstance:
       objectReference: {fileID: 1503623668}
     - target: {fileID: 8272762420077778051, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8272762420077778051, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
       propertyPath: m_SortingOrder
@@ -3827,7 +3827,7 @@ PrefabInstance:
       objectReference: {fileID: 1503623668}
     - target: {fileID: 8272762420077778051, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8272762420077778051, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
       propertyPath: m_SortingOrder
@@ -4052,54 +4052,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000477462}
   m_CullTransparentMesh: 1
---- !u!1 &1019697018
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1019697019}
-  - component: {fileID: 1019697020}
-  m_Layer: 0
-  m_Name: Collider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1019697019
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019697018}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1861836238}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1019697020
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1019697018}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.25
 --- !u!1001 &1036868652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4125,7 +4077,7 @@ PrefabInstance:
       objectReference: {fileID: 1503623668}
     - target: {fileID: 8272762420077778051, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8272762420077778051, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
       propertyPath: m_SortingOrder
@@ -5103,7 +5055,7 @@ PrefabInstance:
       objectReference: {fileID: 1503623668}
     - target: {fileID: 8272762420077778051, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8272762420077778051, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
       propertyPath: m_SortingOrder
@@ -5196,7 +5148,7 @@ PrefabInstance:
       objectReference: {fileID: 1503623668}
     - target: {fileID: 8272762420077778051, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8272762420077778051, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
       propertyPath: m_SortingOrder
@@ -5386,6 +5338,7 @@ GameObject:
   - component: {fileID: 1497275285}
   - component: {fileID: 1497275286}
   - component: {fileID: 1497275287}
+  - component: {fileID: 1497275288}
   m_Layer: 2
   m_Name: Slime_Enemy
   m_TagString: Enemy
@@ -5460,7 +5413,7 @@ Transform:
   - {fileID: 1067384210}
   - {fileID: 1813635369}
   m_Father: {fileID: 1861836238}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1497275281
 Rigidbody2D:
@@ -5638,6 +5591,23 @@ MonoBehaviour:
   maxHitPoints: 3
   EnemyBody: {fileID: 1497275281}
   Explosion: {fileID: 7672770322191566385, guid: 0339a1a82f9c59e44bd345c2f47d84e8, type: 3}
+  Loot: {fileID: 1882765729078215785, guid: 75cfc15222244f14ab775d6e78ec403b, type: 3}
+--- !u!58 &1497275288
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497275275}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.45
 --- !u!1 &1503623666
 GameObject:
   m_ObjectHideFlags: 0
@@ -6225,7 +6195,7 @@ PrefabInstance:
       objectReference: {fileID: 1503623668}
     - target: {fileID: 8272762420077778051, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8272762420077778051, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
       propertyPath: m_SortingOrder
@@ -6571,7 +6541,7 @@ PrefabInstance:
       objectReference: {fileID: 1503623668}
     - target: {fileID: 8272762420077778051, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8272762420077778051, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
       propertyPath: m_SortingOrder
@@ -6771,9 +6741,9 @@ MonoBehaviour:
   Is_In_Sight: 0
   states: {fileID: 1497275285}
   IsAttacking: 0
-  LayersToHit:
+  Layer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
 --- !u!1 &1823707312
 GameObject:
   m_ObjectHideFlags: 0
@@ -8777,7 +8747,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1019697019}
   - {fileID: 1497275278}
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -10198,7 +10167,7 @@ PrefabInstance:
       objectReference: {fileID: 1503623668}
     - target: {fileID: 8272762420077778051, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8272762420077778051, guid: cacc96cbbcad55541a002bc474bce456, type: 3}
       propertyPath: m_SortingOrder
