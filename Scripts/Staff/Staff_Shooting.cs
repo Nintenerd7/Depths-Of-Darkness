@@ -7,7 +7,7 @@ public class Staff_Shooting : MonoBehaviour
     public float Offset;
   
     public Transform Fire_Point;
-    public GameObject Bullet;
+    public Bullet_Operator fire;
     public Manabar Mana;
     //bullet cooldowns
     private float ShotDelay;
@@ -21,10 +21,9 @@ public class Staff_Shooting : MonoBehaviour
         
         if(ShotDelay <= 0)
         {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0)&& fire.isShooting)
         {
           Shoot();
-          Mana.Magic_Cost(0.02f);
         }
         }
         else
@@ -35,8 +34,9 @@ public class Staff_Shooting : MonoBehaviour
 
 void Shoot()
 {
- Instantiate(Bullet,Fire_Point.position, Fire_Point.rotation);
+ Instantiate(fire.Bullet,Fire_Point.position, Fire_Point.rotation);
  ShotDelay = HasShot;
+ Mana.Magic_Cost(0.02f);
  
 }
 }
