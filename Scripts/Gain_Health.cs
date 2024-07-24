@@ -8,14 +8,7 @@ public class Gain_Health : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-
-            var health = other.GetComponent<Hearts_System>();
-            //AudioSourceController.Instance.PlaySFX("Collect");
-        if (health)
-        {
-          health.GiveHeart(1);
-          Destroy(gameObject);
-        }
+         Destroy(gameObject);
         }
     }
 }

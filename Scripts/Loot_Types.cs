@@ -4,49 +4,34 @@ using UnityEngine;
 
 public class Loot_Types : MonoBehaviour
 {
-  public static bool Can_loot;
   public GameObject heart;
- public bool CanSpawn = false;
-  private void Start()
+  public int Count = 0;
+  bool Can_Heal;
+
+  void Start()
   {
-   CanSpawn = false;
+         Can_Heal = false;
   }
   private void Update()
   {
-    switch(Can_loot)
+    if(!Can_Heal)
     {
-     case true:
-     CanSpawn = true;
-     StartCoroutine(Loot_Randomizer());
-     break;
-     case false:
-     Debug.Log("No loot");
-     break;
+      Can_Heal = true;
+      StartCoroutine(Heart());
     }
   }
 //randomizes what loot you will recieve
-  public IEnumerator Loot_Randomizer()
-  {
-       if (Random.Range(0, 6) <= 3)//if random range is more or equal to two
-            {
-              CanSpawn = false;
-               Debug.Log("No loot");
-            }
-            else if (Random.Range(0, 6) >= 4||Random.Range(0, 6) == 6)//if random range is equal to six
-            {
-                Heart();
-                yield return new WaitForSeconds(0.4f);
-                
-            }
-  }
 
 
-    public void Heart()
+    public IEnumerator Heart()
   {
-    if(CanSpawn)
+    Count ++;
+    if(Count >=1)
     {
-    Instantiate(heart,transform.position, Quaternion.identity);//spawns loot from enemy position
-    CanSpawn = false;
+      Count = 1;
+      Instantiate(heart,transform.position, Quaternion.identity);//spawns loot from enemy position
+      Can_Heal = false;
     }
+    yield break;
   }
 }

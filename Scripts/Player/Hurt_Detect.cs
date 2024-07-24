@@ -16,6 +16,10 @@ public class Hurt_Detect : MonoBehaviour
      {
        StartCoroutine(IFrames());
      }
+     else if(other.tag == "Health")
+     {
+      health.GiveHeart();
+     }
    }
 
    public IEnumerator IFrames()

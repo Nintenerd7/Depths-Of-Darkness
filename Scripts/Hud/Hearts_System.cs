@@ -61,10 +61,11 @@ public class Hearts_System : MonoBehaviour
         }
     }
     #endregion
-    public void GiveHeart(int Heart_Health)
+    public void GiveHeart()
     {
 
-        HeartHealth+=Heart_Health; 
+        HeartHealth+=1; 
+        
         hearts[i].sprite = Full;//sprite changes 
         if (HeartHealth == 3)
         {
