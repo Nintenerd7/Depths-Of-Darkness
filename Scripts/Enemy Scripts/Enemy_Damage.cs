@@ -9,7 +9,9 @@ public class Enemy_Damage : MonoBehaviour
     public float maxHitPoints = 3;
     public Rigidbody2D EnemyBody;
     public GameObject Explosion;
-    public GameObject Loot;
+    public GameObject Heart_Loot;
+    public GameObject Ore_Loot;
+    public Hearts_System health;
 
     //
 
@@ -35,8 +37,17 @@ public class Enemy_Damage : MonoBehaviour
 //randomizing the ammount of times you can get loot from enemies
     public void LootDrop()
     {
-                 Debug.Log("loot");
-                Instantiate(Loot,transform.position, Quaternion.identity);//spawns loot from enemy position
+               if (health.HeartHealth <=2)
+            {
+               Debug.Log("loot");
+              Instantiate(Heart_Loot,transform.position, Quaternion.identity);//spawns loot from enemy position
+            }
+            else 
+            {
+               Debug.Log("ore");
+               Instantiate(Ore_Loot,transform.position, Quaternion.identity);//spawns loot from enemy position
+            }
+                
 
     }
 

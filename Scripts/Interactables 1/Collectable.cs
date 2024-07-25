@@ -11,15 +11,15 @@ public class Collectable : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-           collection(1);
+           collection();
             Destroy(gameObject);
             Mana.Magic_Gain(0.05f);
         }
 
     }
-      public void collection(int total)
+      public void collection()
     {
-        Count += total;
+        Count ++;
         CountText.text = Count.ToString("0");
     }
 }
