@@ -3663,8 +3663,7 @@ GameObject:
   - component: {fileID: 1111277433}
   - component: {fileID: 1111277435}
   - component: {fileID: 1111277436}
-  - component: {fileID: 1111277437}
-  - component: {fileID: 1111277438}
+  - component: {fileID: 1111277439}
   m_Layer: 6
   m_Name: Player Place Holder
   m_TagString: Player
@@ -3761,6 +3760,7 @@ MonoBehaviour:
   speed: 5
   isDashing: 0
   tr: {fileID: 1111277435}
+  anim: {fileID: 1111277439}
 --- !u!50 &1111277433
 Rigidbody2D:
   serializedVersion: 4
@@ -3939,45 +3939,27 @@ MonoBehaviour:
   - Bullet_Name: Earth
     Bullet_Type: {fileID: 7179948860594515308, guid: b7aa31966d6f85e478ad481828db55d7, type: 3}
   isShooting: 0
---- !u!114 &1111277437
-MonoBehaviour:
+--- !u!95 &1111277439
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111277429}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cab61c6742af0aa4796ed8e5c5125e34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 1111277430}
-  newSprite:
-  - {fileID: -1924969252, guid: 96be134bcbb06bd47bcc28518277798f, type: 3}
-  - {fileID: -1260947663, guid: 96be134bcbb06bd47bcc28518277798f, type: 3}
-  - {fileID: -1923000178, guid: 96be134bcbb06bd47bcc28518277798f, type: 3}
-  - {fileID: 69615031, guid: 96be134bcbb06bd47bcc28518277798f, type: 3}
-  - {fileID: 864042115, guid: 2d105375783cef04f82241fe4daa71bf, type: 3}
-  - {fileID: -500414559, guid: 2d105375783cef04f82241fe4daa71bf, type: 3}
-  - {fileID: -1153863705, guid: 2d105375783cef04f82241fe4daa71bf, type: 3}
-  - {fileID: -1258958389, guid: 2d105375783cef04f82241fe4daa71bf, type: 3}
-  Swim: 0
-  change: {fileID: 1111277438}
-  Weapon: {fileID: 793100842}
---- !u!114 &1111277438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111277429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 594791de214d887449333c66eb3c7785, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  behaviour: 0
-  state: {fileID: 1111277437}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be550caf4f956104a8e2c214d00ec71c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1132174348
 GameObject:
   m_ObjectHideFlags: 0
@@ -4996,6 +4978,7 @@ GameObject:
   - component: {fileID: 1534555196}
   - component: {fileID: 1534555195}
   - component: {fileID: 1534555194}
+  - component: {fileID: 1534555199}
   m_Layer: 0
   m_Name: Water
   m_TagString: Swim
@@ -5604,6 +5587,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1534555199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534555192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da2a4790cc2a9ec43a684c13f81d2362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swim: {fileID: 1111277432}
 --- !u!114 &1537209957 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4809919656122115818, guid: 09a22a8781d3c7e468c066901c249b35, type: 3}

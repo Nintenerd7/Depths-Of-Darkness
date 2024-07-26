@@ -11,12 +11,14 @@ public class Top_Down_movement : MonoBehaviour
     float Vertical;
     public bool isDashing = false; 
     public TrailRenderer tr;
+    public Animator anim;
     // Start is called before the first frame update
     // Update is called once per frame
     void Update()
     {
      Horizontal = Input.GetAxisRaw("Horizontal");
      Vertical = Input.GetAxisRaw("Vertical"); 
+     UpdateAnim();
      StartCoroutine(Dash(6f));
     }
     private void FixedUpdate()
@@ -37,6 +39,31 @@ public class Top_Down_movement : MonoBehaviour
          tr.emitting = false;
          isDashing = false;
          speed = 5f;
+      }
+    }
+
+    public void UpdateAnim()
+    {
+      if(body.velocity != Vector2.zero)
+      {
+      anim.SetBool("Walking", true);
+      anim.SetFloat("Horizontal", body.velocity.x);
+      anim.SetFloat("Vertical", body.velocity.y);
+      }
+      else
+      {
+       anim.SetBool("Walking", false);
+      }
+    }
+
+    public void UpdateSwim()
+    {
+      if(body.velocity != Vector2.zero)
+      {
+      anim.SetBool("Walking", false);
+      anim.SetBool("Swimming", true);
+      anim.SetFloat("Horizontal", body.velocity.x);
+      anim.SetFloat("Vertical", body.velocity.y);
       }
     }
 
