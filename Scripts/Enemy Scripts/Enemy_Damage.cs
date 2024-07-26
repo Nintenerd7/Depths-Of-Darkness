@@ -44,8 +44,7 @@ public class Enemy_Damage : MonoBehaviour
             }
             else 
             {
-               Debug.Log("ore");
-               Instantiate(Ore_Loot,transform.position, Quaternion.identity);//spawns loot from enemy position
+              //nothing for now
             }
                 
 
