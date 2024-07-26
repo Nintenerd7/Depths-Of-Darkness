@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Water_Animation : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
-    public Sprite newSwimSprite;
-
+    public Animation anim;
     private void OnTriggerEnter2D(Collider2D other)
     {
       if(other.tag == "Player")
       {
-       spriteRenderer.sprite = newSwimSprite; 
+        anim.Swim = true;
       }
+
     }
+void OnTriggerExit2D(Collider2D other)
+    {
+      anim.Swim = false;
+    }
+
 }
