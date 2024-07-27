@@ -23,6 +23,7 @@ public class Staff_Shooting : MonoBehaviour
         {
         if(Input.GetMouseButtonDown(0)&& fire.isShooting)
         {
+          AudioSourceController.Instance.PlaySFX("Shoot");
           Shoot();
         }
         }

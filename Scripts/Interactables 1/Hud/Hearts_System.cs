@@ -59,6 +59,11 @@ public class Hearts_System : MonoBehaviour
             //SceneManager.LoadScene(2);
             HeartHealth = 3; 
         }
+        if (HeartHealth == 1)
+        {
+            //SceneManager.LoadScene(2);
+            AudioSourceController.Instance.PlaySFX("Heart Low");
+        }
     }
     #endregion
     public void GiveHeart()

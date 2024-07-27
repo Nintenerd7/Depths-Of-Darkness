@@ -2636,7 +2636,19 @@ MonoBehaviour:
     SoundClip: {fileID: 8300000, guid: 6a7110d69b4b46c4da1e98a5ee127e45, type: 3}
   - Sound_Name: Title
     SoundClip: {fileID: 8300000, guid: fad8f1560114f9c41a904a52f2d4a869, type: 3}
-  SFXLable: []
+  SFXLable:
+  - Sound_Name: Collect
+    SoundClip: {fileID: 8300000, guid: 6af2dbb94a927ea46ad1ada76f2f159e, type: 3}
+  - Sound_Name: Correct
+    SoundClip: {fileID: 8300000, guid: 2146a9bb2475c49438363da51de7dc75, type: 3}
+  - Sound_Name: Heart Low
+    SoundClip: {fileID: 8300000, guid: 6ceb4d340ca028b4da2a175b30796d99, type: 3}
+  - Sound_Name: Chest
+    SoundClip: {fileID: 8300000, guid: c0f88d6716dc98248851a89aa9a4d1b5, type: 3}
+  - Sound_Name: Explosion
+    SoundClip: {fileID: 8300000, guid: a4cb301add2d9154e99e64cf45f408ce, type: 3}
+  - Sound_Name: Shoot
+    SoundClip: {fileID: 8300000, guid: 1fcfb087d91efc84885fd5a30ca97473, type: 3}
   Music_Src: {fileID: 258882158}
   SFX_Src: {fileID: 782018035}
 --- !u!4 &1818360102

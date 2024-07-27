@@ -18,7 +18,7 @@ public class Unlock_Door : MonoBehaviour
           UnlockDoor.SetActive(false);
           Indicator.SetActive(false);
           toggle.Icon[0].SetActive(false);
-
+          AudioSourceController.Instance.PlaySFX("Correct");
         }
        }
     }

@@ -13,6 +13,7 @@ public class Bullet : MonoBehaviour
     }
   private void OnTriggerEnter2D(Collider2D other)
   {
+    AudioSourceController.Instance.PlaySFX("Explosion");
     Instantiate(Explosion,transform.position, Quaternion.identity);
         if(other.tag == "Destroyable")
         {

@@ -11,6 +11,7 @@ public class Collectable : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
+          AudioSourceController.Instance.PlaySFX("Collect");
            collection();
             Destroy(gameObject);
             Mana.Magic_Gain(0.05f);

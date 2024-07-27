@@ -26,6 +26,7 @@ public class Enemy_Spawnner : MonoBehaviour
      }
      if(CanOpen)
      {
+      AudioSourceController.Instance.PlaySFX("Correct");
         Doors[0].SetActive(false);
         Doors[1].SetActive(false);
         Destroy(gameObject);

@@ -24,6 +24,7 @@ int KeyCount = 1;//how many keys the player has taken
            Icon[0].SetActive(true);
            Icon[1].SetActive(false);
            KeyCount--;
+           AudioSourceController.Instance.PlaySFX("Chest");
 
         }
        if(KeyCount == 0)
