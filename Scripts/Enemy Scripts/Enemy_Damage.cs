@@ -31,6 +31,7 @@ public class Enemy_Damage : MonoBehaviour
             LootDrop();
             Instantiate(Explosion,transform.position, Quaternion.identity);
             Destroy(this.gameObject);//enemy is killed
+            Enemy_Spawnner.count ++;
         
         }
     }
