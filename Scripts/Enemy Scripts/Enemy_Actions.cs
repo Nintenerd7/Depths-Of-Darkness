@@ -31,6 +31,7 @@ public class Enemy_Actions : MonoBehaviour
 
  public void Idle()//IDLE: AI DOES NOT MOVE WHEN PLAYER IS NOT IN SIGHT 
 {
+  AudioSourceController.Instance.PlayMusic("Battle");
   speed = 0f;//speed is null
 }
 

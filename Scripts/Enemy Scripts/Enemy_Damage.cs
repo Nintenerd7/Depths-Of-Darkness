@@ -19,7 +19,6 @@ public class Enemy_Damage : MonoBehaviour
     {
         HitPoints = maxHitPoints;
         EnemyBody = GetComponent<Rigidbody2D>();
-
     }
 
     public void TakeHit(float damage)

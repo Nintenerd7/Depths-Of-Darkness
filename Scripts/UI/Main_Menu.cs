@@ -7,7 +7,7 @@ public class Main_Menu : MonoBehaviour
  public void Play()
     {
         //play button 
-        //AudioSourceController.Instance.PlayMusic("Level");
+        AudioSourceController.Instance.PlayMusic("Level");
         SceneManager.LoadScene(1);
     }
 
