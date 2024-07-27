@@ -12,14 +12,27 @@ public class Top_Down_movement : MonoBehaviour
     public bool isDashing = false; 
     public TrailRenderer tr;
     public Animator anim;
+    public bool Swimming = false;
+    public LayerMask Water;
+    public LayerMask Ground;
     // Start is called before the first frame update
     // Update is called once per frame
+
+    void Start()
+    {
+     Swimming = false;
+    }
     void Update()
     {
      Horizontal = Input.GetAxisRaw("Horizontal");
      Vertical = Input.GetAxisRaw("Vertical"); 
-     UpdateAnim();
      StartCoroutine(Dash(6f));
+       IsWalkable();
+       IsSwimmable();
+     
+
+
+    
     }
     private void FixedUpdate()
     {
@@ -46,6 +59,7 @@ public class Top_Down_movement : MonoBehaviour
     {
       if(body.velocity != Vector2.zero)
       {
+      anim.SetBool("Swimming", false);
       anim.SetBool("Walking", true);
       anim.SetFloat("Horizontal", body.velocity.x);
       anim.SetFloat("Vertical", body.velocity.y);
@@ -56,15 +70,41 @@ public class Top_Down_movement : MonoBehaviour
       }
     }
 
-    public void UpdateSwim()
+    public void UpdateWater()
     {
       if(body.velocity != Vector2.zero)
       {
-      anim.SetBool("Walking", false);
       anim.SetBool("Swimming", true);
+      anim.SetBool("Walking", false);
       anim.SetFloat("Horizontal", body.velocity.x);
       anim.SetFloat("Vertical", body.velocity.y);
       }
+  
     }
+              private bool IsSwimmable()
+        {
+            //enables collisisions for interactive objects
+            if (Physics2D.OverlapCircle(transform.position, 0.3f, Water) != null)
+            {
+                Swimming = true;
+                UpdateWater();
+                return false;
+            }
+            
+            return true;
+        }
+
+                 private bool IsWalkable()
+        {
+            //enables collisisions for interactive objects
+            if (Physics2D.OverlapCircle(transform.position, 0.3f, Ground) == null)
+            {
+                Swimming = false;
+                UpdateAnim();
+                return false;
+            }
+            
+            return true;
+        }
 
 }
