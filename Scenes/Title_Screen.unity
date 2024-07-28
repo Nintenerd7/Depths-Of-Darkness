@@ -2649,6 +2649,8 @@ MonoBehaviour:
     SoundClip: {fileID: 8300000, guid: a4cb301add2d9154e99e64cf45f408ce, type: 3}
   - Sound_Name: Shoot
     SoundClip: {fileID: 8300000, guid: 1fcfb087d91efc84885fd5a30ca97473, type: 3}
+  - Sound_Name: LBL
+    SoundClip: {fileID: 8300000, guid: 3af40de704542fe4e8ff5851ae520d67, type: 3}
   Music_Src: {fileID: 258882158}
   SFX_Src: {fileID: 782018035}
 --- !u!4 &1818360102
