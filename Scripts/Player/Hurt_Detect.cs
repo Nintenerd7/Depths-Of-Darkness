@@ -6,6 +6,7 @@ public class Hurt_Detect : MonoBehaviour
 {
    public Hearts_System health;
    bool can_be_hurt;
+       public SpriteRenderer sprite;
    void Start()
    {
      can_be_hurt = true;
@@ -20,6 +21,10 @@ public class Hurt_Detect : MonoBehaviour
      {
       health.GiveHeart();
      }
+     if(health.HeartHealth == 0)
+     {
+       StopAllCoroutines();
+     }
    }
 
    public IEnumerator IFrames()
@@ -27,9 +32,15 @@ public class Hurt_Detect : MonoBehaviour
      health.TakeHeart(1);//takes one heart
      can_be_hurt = false;
      Debug.Log("Iframes on");
-     yield return new WaitForSeconds(3);
+     sprite.color = new Color (0, 0, 0, 0);
+     yield return new WaitForSeconds(0.2f);
+     sprite.color = new Color (1, 1, 1, 1);
+     yield return new WaitForSeconds(0.2f);
+     sprite.color = new Color (0, 0, 0, 0);
+     yield return new WaitForSeconds(0.2f);
+     sprite.color = new Color (1, 1, 1, 1);
+     yield return new WaitForSeconds(2f);
      can_be_hurt = true;
      Debug.Log("Iframes off");
-
    }
 }

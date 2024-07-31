@@ -9,12 +9,13 @@ public class Top_Down_movement : MonoBehaviour
     public float speed;
     float Horizontal;
     float Vertical;
-    public bool isDashing = false; 
+    public static bool isDashing = false; 
     public TrailRenderer tr;
     public Animator anim;
     public bool Swimming = false;
     public LayerMask Water;
     public LayerMask Ground;
+    public Manabar mana;
     // Start is called before the first frame update
     // Update is called once per frame
 
@@ -24,15 +25,18 @@ public class Top_Down_movement : MonoBehaviour
     }
     void Update()
     {
+             if(mana.totalMana < 0.2f)
+            {
+             isDashing = false;//player cannot dash 
+            }
+            else
+            {
+             StartCoroutine(Dash(8f));//player can dash if it has enough juice
+            }
      Horizontal = Input.GetAxisRaw("Horizontal");
      Vertical = Input.GetAxisRaw("Vertical"); 
-     StartCoroutine(Dash(6f));
-       IsWalkable();
-       IsSwimmable();
-     
-
-
-    
+     IsWalkable();
+     IsSwimmable();
     }
     private void FixedUpdate()
     {
@@ -43,15 +47,16 @@ public class Top_Down_movement : MonoBehaviour
     public IEnumerator Dash(float dashing)
     {
 
-      if(!isDashing && Input.GetMouseButtonDown(1))
+      if(!isDashing && Input.GetMouseButtonDown(1) && mana.totalMana > 0)
       {
          isDashing = true;
          speed += dashing;
+         mana.Magic_Cost(0.1f);
          tr.emitting = true;
          yield return new WaitForSeconds(0.4f);
          tr.emitting = false;
          isDashing = false;
-         speed = 5f;
+         speed = 3f;
       }
     }
 

@@ -14,11 +14,7 @@ public class Bullet_Operator : MonoBehaviour
         if (Instance == null)//if there is no instance in the audio source
         {
             Instance = this;//set instance to the index of the sound name.
-            DontDestroyOnLoad(gameObject);//do not destroy
-        }
-        else
-        {
-            Destroy(gameObject);
+            //DontDestroyOnLoad(gameObject);//do not destroy
         }
     }
       private void Start()

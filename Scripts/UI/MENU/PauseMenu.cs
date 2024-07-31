@@ -6,25 +6,31 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
 
+    public static bool IsPaused;
     [SerializeField] GameObject pauseMenu;
+    public GameObject[] hide_obj = new GameObject [2];
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Bullet_Select.IsPaused)
+            if (IsPaused)
             {
                 resume();
+                hide_obj[0].SetActive(true);
+                hide_obj[1].SetActive(true);
             }
             else
             {
                 Paused();
+                hide_obj[0].SetActive(false);
+                hide_obj[1].SetActive(false);
             }
         }
     }
     public void Paused()
     {
-        Bullet_Select.IsPaused = true;
+        IsPaused = true;
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;//pauses menu
     }
@@ -32,16 +38,18 @@ public class PauseMenu : MonoBehaviour
 
     public void resume()
     {
-       Bullet_Select.IsPaused = false;
+       IsPaused = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;//menu disapears
     }
 
     public void Menu()
     {
-        Bullet_Select.IsPaused = false;
+        AudioSourceController.Instance.PlayMusic("Title");
+        IsPaused = false;
         pauseMenu.SetActive(false);
-        SceneManager.LoadScene(1);//loads title screen
+        SceneManager.LoadScene(0);//loads title screen
         Time.timeScale = 1f;//menu disapears
+        Collectable.Count = 0;
     }
 }

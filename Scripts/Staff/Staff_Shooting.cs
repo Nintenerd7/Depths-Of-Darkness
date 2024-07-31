@@ -15,6 +15,15 @@ public class Staff_Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
+switch(PauseMenu.IsPaused)
+{
+ case true:
+ gameObject.SetActive(false);
+ break;
+ case false:
+  this.gameObject.SetActive(true);
+ break;
+}
       Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition)-transform.position;
       float rotZ = Mathf.Atan2(difference.y,difference.x)*Mathf.Rad2Deg;
       transform.rotation = Quaternion.Euler(0f,0f,rotZ);

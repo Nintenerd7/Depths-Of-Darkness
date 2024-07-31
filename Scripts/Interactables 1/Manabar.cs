@@ -33,6 +33,7 @@ public class Manabar : MonoBehaviour
             {
              totalMana = 1;
             }
+
             SetSize(totalMana);
         }
         public static void SetSize(float size)

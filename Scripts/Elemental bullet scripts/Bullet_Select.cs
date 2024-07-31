@@ -10,21 +10,11 @@ public class Bullet_Select : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if (IsPaused)
-            {
-                resume();
-                HiddenOBJ[0].SetActive(true);
-                HiddenOBJ[1].SetActive(true);
-            }
-            else
-            {
-                Pause_Menu();
-                HiddenOBJ[0].SetActive(false);
-                HiddenOBJ[1].SetActive(false);
-            }
-        }
+      if(!PauseMenu.IsPaused)
+      {
+        CanSelect();//player can select bullets if not paused
+      }
+ 
     }
     public void Pause_Menu()
     {
@@ -78,6 +68,25 @@ public class Bullet_Select : MonoBehaviour
         Time.timeScale = 1f;//menu disapears
                 HiddenOBJ[0].SetActive(true);
          HiddenOBJ[1].SetActive(true);
+    }
+
+    void CanSelect()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (IsPaused)
+            {
+                resume();
+                HiddenOBJ[0].SetActive(true);
+                HiddenOBJ[1].SetActive(true);
+            }
+            else
+            {
+                Pause_Menu();
+                HiddenOBJ[0].SetActive(false);
+                HiddenOBJ[1].SetActive(false);
+            }
+        }
     }
 
 }
