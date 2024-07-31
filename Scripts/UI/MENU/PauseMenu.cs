@@ -38,6 +38,8 @@ public class PauseMenu : MonoBehaviour
 
     public void resume()
     {
+    hide_obj[0].SetActive(true);
+    hide_obj[1].SetActive(true);
        IsPaused = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;//menu disapears
