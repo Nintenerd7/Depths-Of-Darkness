@@ -49,6 +49,7 @@ public class Top_Down_movement : MonoBehaviour
 
       if(!isDashing && Input.GetMouseButtonDown(1) && mana.totalMana > 0)
       {
+        AudioSourceController.Instance.PlaySFX("Dash");
          isDashing = true;
          speed += dashing;
          mana.Magic_Cost(0.1f);

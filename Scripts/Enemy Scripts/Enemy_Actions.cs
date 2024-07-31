@@ -42,6 +42,7 @@ public void AIFollow()//AI FOLLOW:
 }
 public void AIAttack()
 {
+  AudioSourceController.Instance.PlaySFX("Dash");
     tr.emitting = true;//trail is visible
     speed = 3f;//speed is equal to three
     transform.position = Vector2.MoveTowards(transform.position, Target.position,speed*Time.deltaTime);//enemy position will move towards player using the speed it has.

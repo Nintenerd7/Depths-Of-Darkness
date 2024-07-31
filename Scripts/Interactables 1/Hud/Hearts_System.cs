@@ -51,6 +51,7 @@ public class Hearts_System : MonoBehaviour
     #region TakeHeart And GiveHeart Methods 
     public void TakeHeart(int Heart_Damage)
     {
+        AudioSourceController.Instance.PlaySFX("Heart Taken");
         HeartHealth-=Heart_Damage;
         hearts[i].sprite = Empty;
        // AudioSourceController.Instance.PlaySFX("Player_Hit");
@@ -68,7 +69,7 @@ public class Hearts_System : MonoBehaviour
     #endregion
     public void GiveHeart()
     {
-
+        AudioSourceController.Instance.PlaySFX("Heart_Gain");
         HeartHealth+=1; 
         
         hearts[i].sprite = Full;//sprite changes 

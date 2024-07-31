@@ -2872,6 +2872,12 @@ MonoBehaviour:
     SoundClip: {fileID: 8300000, guid: 1fcfb087d91efc84885fd5a30ca97473, type: 3}
   - Sound_Name: LBL
     SoundClip: {fileID: 8300000, guid: 3af40de704542fe4e8ff5851ae520d67, type: 3}
+  - Sound_Name: Dash
+    SoundClip: {fileID: 8300000, guid: 580fc0a610e2ad246bf725f777283f19, type: 3}
+  - Sound_Name: Heart_Gain
+    SoundClip: {fileID: 8300000, guid: 25bae47a2bdec174aa66dfe89af4d158, type: 3}
+  - Sound_Name: Heart Taken
+    SoundClip: {fileID: 8300000, guid: 775c93979260ed54e9e62047957b0914, type: 3}
   Music_Src: {fileID: 258882158}
   SFX_Src: {fileID: 782018035}
 --- !u!4 &1818360102
